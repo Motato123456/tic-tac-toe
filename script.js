@@ -1,4 +1,12 @@
+const displayMessage = (function(){
+    
+    const showMessage = (message)=>{
+        document.querySelector('.message').innerHTML = message
+    }
 
+    return {showMessage}
+
+})();
 const gameBoard = (function (){
     let board = new Array(9).fill('');
     let displayBoard = function () {
@@ -50,11 +58,11 @@ const playgame = (function(){
         currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0 ;
         if(checkForWin(gameBoard.getGameboard(),players[currentPlayerIndex].token)){
             gameOver = true;
-            alert('playerwon')
+            displayMessage.showMessage(`${players[currentPlayerIndex].name} is the winner!`)
         }
         else if(checkForTie(gameBoard.getGameboard())){
             gameOver = true;
-            alert('its a tie!')
+            displayMessage.showMessage('Its a tie!')
         }
         
     }
