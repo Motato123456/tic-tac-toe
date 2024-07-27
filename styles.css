@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    display: flex;
+    margin: 500px auto;
+    width: 1000px;
+    gap: 40px   ;
+    
+}
+.container2{
+    display: flex;
+    gap: 20px;
+}
+.container{
+    display: grid;
+    grid-template: 100px 100px 100px/100px 100px 100px;
+    gap: 0px    ;
+}
+.container > button {
+    border: 1px black solid;
+    cursor: pointer;
+
+}
